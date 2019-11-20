@@ -38,7 +38,7 @@ class excel():
             rowdata.append(cellvalue)
         return rowdata
 
-    # 设置某个单元格的值
+    # 设置某个单元格的值()
     def setCellValue(self, row, colunm, cellvalue):
         try:
             self.ws.cell(row=row, column=colunm).value = cellvalue
