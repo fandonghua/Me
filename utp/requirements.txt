@@ -1,0 +1,8 @@
+nnreport
+pymysql
+yamail
+requests
+jsonpath
+nnlog
+xlrd
+parameterized

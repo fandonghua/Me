@@ -1,0 +1,43 @@
+2019-11-25 23:51:39,347 - /Users/didi/Downloads/day9/utp/projects/litemall/public/tools.py[line:20] - DEBUG: 登录的返回结果，{'errmsg': '成功', 'data': {'adminInfo': {'nickName': 'admin123', 'avatar': 'https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif'}, 'token': 'b6408d62-3efd-4fc1-9fc5-6c56226550e2'}, 'errno': 0}
+2019-11-25 23:53:33,686 - /Users/didi/Downloads/day9/utp/projects/litemall/public/tools.py[line:20] - DEBUG: 登录的返回结果，{'errmsg': '成功', 'data': {'token': 'f9dfa07a-e18f-457a-b21d-2b13c067a13f', 'adminInfo': {'nickName': 'admin123', 'avatar': 'https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif'}}, 'errno': 0}
+2019-11-25 23:59:42,060 - /Users/didi/Downloads/day9/utp/projects/litemall/public/tools.py[line:20] - DEBUG: 登录的返回结果，{'errno': 0, 'errmsg': '成功', 'data': {'adminInfo': {'avatar': 'https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif', 'nickName': 'admin123'}, 'token': '0b14f553-dde9-4859-950b-cf5d2f158f3c'}}
+2019-11-26 00:00:12,623 - /Users/didi/Downloads/day9/utp/utils/send_message.py[line:19] - ERROR: 发送邮件失败+Traceback (most recent call last):
+  File "/Users/didi/Downloads/day9/utp/utils/send_message.py", line 17, in send_mail
+    to=email_to, cc=email_cc, attachments=files)
+  File "/Users/didi/miniconda3/lib/python3.5/site-packages/yagmail/sender.py", line 144, in send
+    self.login()
+  File "/Users/didi/miniconda3/lib/python3.5/site-packages/yagmail/sender.py", line 243, in login
+    self._login(self.credentials)
+  File "/Users/didi/miniconda3/lib/python3.5/site-packages/yagmail/sender.py", line 201, in _login
+    self.smtp.login(self.user, password)
+  File "/Users/didi/miniconda3/lib/python3.5/smtplib.py", line 693, in login
+    self.ehlo_or_helo_if_needed()
+  File "/Users/didi/miniconda3/lib/python3.5/smtplib.py", line 599, in ehlo_or_helo_if_needed
+    if not (200 <= self.ehlo()[0] <= 299):
+  File "/Users/didi/miniconda3/lib/python3.5/smtplib.py", line 440, in ehlo
+    (code, msg) = self.getreply()
+  File "/Users/didi/miniconda3/lib/python3.5/smtplib.py", line 393, in getreply
+    raise SMTPServerDisconnected("Connection unexpectedly closed")
+smtplib.SMTPServerDisconnected: Connection unexpectedly closed
+
+2019-11-26 12:56:58,233 - /Users/didi/PycharmProjects/utp/utils/data_util.py[line:36] - DEBUG: 开始读取参数化文件/Users/didi/PycharmProjects/utp/projects/litemall/data/address.xlsx
+2019-11-26 12:58:00,446 - /Users/didi/PycharmProjects/utp/utils/data_util.py[line:36] - DEBUG: 开始读取参数化文件/Users/didi/PycharmProjects/utp/projects/litemall/data/address.xlsx
+2019-11-26 12:58:00,875 - /Users/didi/PycharmProjects/utp/projects/litemall/public/tools.py[line:20] - DEBUG: 登录的返回结果，{'errmsg': '成功', 'data': {'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0aGlzIGlzIGxpdGVtYWxsIHRva2VuIiwiYXVkIjoiTUlOSUFQUCIsImlzcyI6IkxJVEVNQUxMIiwiZXhwIjoxNTc0NzUxNDgwLCJ1c2VySWQiOjEsImlhdCI6MTU3NDc0NDI4MH0.hhGBqP7DsJmQ4nzNaWuUBFkJO-xhxyJjRG80Ft82Rqo', 'userInfo': {'nickName': 'user123', 'avatarUrl': ''}}, 'errno': 0}
+2019-11-26 12:58:01,582 - /Users/didi/PycharmProjects/utp/projects/litemall/public/tools.py[line:20] - DEBUG: 登录的返回结果，{'errmsg': '成功', 'data': {'token': 'e6b8cf52-998b-48e0-8be6-365e432d5f28', 'adminInfo': {'avatar': 'https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif', 'nickName': 'admin123'}}, 'errno': 0}
+2019-11-26 12:58:04,150 - /Users/didi/PycharmProjects/utp/utils/send_message.py[line:19] - ERROR: 发送邮件失败+Traceback (most recent call last):
+  File "/Users/didi/PycharmProjects/utp/utils/send_message.py", line 17, in send_mail
+    to=email_to, cc=email_cc, attachments=files)
+  File "/Users/didi/miniconda3/lib/python3.5/site-packages/yamail/sender.py", line 147, in send
+    self.login()
+  File "/Users/didi/miniconda3/lib/python3.5/site-packages/yamail/sender.py", line 246, in login
+    self._login(self.credentials)
+  File "/Users/didi/miniconda3/lib/python3.5/site-packages/yamail/sender.py", line 204, in _login
+    self.smtp.login(self.user, password)
+  File "/Users/didi/miniconda3/lib/python3.5/smtplib.py", line 729, in login
+    raise last_exception
+  File "/Users/didi/miniconda3/lib/python3.5/smtplib.py", line 720, in login
+    initial_response_ok=initial_response_ok)
+  File "/Users/didi/miniconda3/lib/python3.5/smtplib.py", line 641, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'Error: authentication failed')
+

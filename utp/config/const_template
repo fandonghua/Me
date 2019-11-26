@@ -1,0 +1,9 @@
+import os
+
+host = 'http://ip:port'  # 测试环境地址
+
+project_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+data_path = os.path.join(project_path, 'data')  # 存测试数据的目录
+report_path = os.path.join(project_path, 'report')  # 存报告的目录
+case_path = os.path.join(project_path, 'cases')  # 存测试用例的目录

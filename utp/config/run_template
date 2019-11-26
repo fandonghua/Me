@@ -1,0 +1,33 @@
+import os, sys
+
+root_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+# 项目根目录，加入环境变量，否则直接在命令行里面运行的时候有问题， 找不到其他的模块
+sys.path.insert(0, root_dir)
+
+import unittest
+import datetime
+import nnreport as bf
+from projects.{project_name}.public.const import case_path, report_path
+from config.setting import email_template
+from utils.send_message import send_mail
+
+
+def run():
+    test_suite = unittest.defaultTestLoader.discover(case_path, 'test*.py')
+    # 这里是指定找什么开头的.py文件，运行用例的时候可以自己改
+    report = bf.BeautifulReport(test_suite)
+    title = '{project_name}_测试报告'
+    filename = title + '_' + datetime.datetime.now().strftime('%Y%m%d%H%M%S') + '.html'
+    report.report(description=title,
+                  filename=filename,
+                  log_path=report_path)
+    email_content = email_template.format(pass_count=report.success_count,
+                                          fail_count=report.failure_count,
+                                          all_count=report.success_count + report.failure_count)
+
+    report_abs_path = os.path.join(report_path, filename)
+    send_mail(filename, email_content, report_abs_path)
+
+
+if __name__ == '__main__':
+    run()
